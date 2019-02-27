@@ -1,0 +1,1 @@
+8dd5de32-9b67-4b61-86da-f1088f2f1e16 bucket=openneuro-private datacenter=US encryption=none exporttree=yes fileprefix=ds001769/ host=s3.amazonaws.com name=s3-PRIVATE partsize=1GiB port=80 public=no storageclass=STANDARD type=S3 versioning=yes timestamp=1551230565.348030468s
