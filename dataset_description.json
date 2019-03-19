@@ -1,22 +1,23 @@
 {
-    "Name": "studyforrest_movie_denoised", 
-    "BIDSVersion": "1.1.2", 
-    "Description": "The data presented here are related to the studyforrest project. A four-step denoising procedure including preprocessing, ICA decomposition, IC classification and artefacts removal were applied on the movie-watching fMRI data in the studyforrest dataset, producing a denoised version of that.", 
-    "License": "-", 
+    "Name": "studyforrest_movie_denoised",
+    "License": "CC-BY",
     "Authors": [
-        "Xingyu Liu", 
-        "Zonglei Zhen", 
-        "Haohao Bai", 
+        "Xingyu Liu",
+        "Zonglei Zhen",
+        "Haohao Bai",
         "Jia Liu"
-    ], 
-    "Acknowledgements": "Special thanks to the team of studyforrest project especially Michael Hanke for his support.", 
-    "HowToAcknowledge": "-", 
+    ],
+    "Acknowledgements": "Special thanks to the team of studyforrest project especially Michael Hanke for his support.",
+    "HowToAcknowledge": "-",
     "Funding": [
-		"National Natural Science Foundation of China Grant No. 81601168, 31771251",
-		"National Social Science Foundation of China Grant No. 14ZDB160 and 15ZDB139",
-		"the Changjiang Scholars Program of China"
-	],
+        "National Natural Science Foundation of China Grant No. 81601168, 31771251",
+        "National Social Science Foundation of China Grant No. 14ZDB160 and 15ZDB139",
+        "the Changjiang Scholars Program of China"
+    ],
     "ReferencesAndLinks": [
         "-"
-    ]
+    ],
+    "DatasetDOI": "",
+    "BIDSVersion": "1.1.2",
+    "Description": "The data presented here are related to the studyforrest project. A four-step denoising procedure including preprocessing, ICA decomposition, IC classification and artefacts removal were applied on the movie-watching fMRI data in the studyforrest dataset, producing a denoised version of that."
 }
