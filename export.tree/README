@@ -1,0 +1,23 @@
+A denoised audio-visual movie watching fMRI data in studyforrest dataset
+========================================================================
+
+The data presented here are related to the 3T movie-watching fMRI data in 
+the studyforrest project(https://openneuro.org/datasets/ds000113).
+
+A four-step denoising procedure including preprocessing, 
+ICA decomposition, IC classification and artefacts removal were applied 
+on the movie-watching fMRI data in the studyforrest dataset, producing a 
+denoised version of that. 
+
+After the four-stage data cleanup procedure, 3 kinds of data were produced for 
+each run of each participant. 
+1. the denoised fMRI data
+	named 'sub­xx_ses-movie_task-movieDenoisedSm5/movieDenoisedUnsm_run-xx_bold.nii.gz'
+2. ICs decomposed from the original data named 
+	named 'sub­xx_ses-movie_task-movieDenoisedSm5/movieDenoisedUnsm_run-xx_bold_IC.nii.gz'
+3. the corresponding label file of each IC file
+	named 'sub­xx_ses-movie_task-movieDenoisedSm5/movieDenoisedUnsm_run-xx_bold_IC_labels.txt'
+
+For more information about the studyforrest project visit: http://studyforrest.org
+
+
