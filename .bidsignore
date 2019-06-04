@@ -1,2 +1,6 @@
-**/sub-*/ses-movie/func/*IC.nii.gz
-**/sub-*/ses-movie/func/*.txt
+**/sub-*/ses-movie/func/*_desc-denoisedSm5_bold.nii.gz
+**/sub-*/ses-movie/func/*_desc-denoisedUnsm_bold.nii.gz
+**/sub-*/ses-movie/func/*_components.nii.gz
+**/sub-*/ses-movie/func/*_mixing.tsv
+**/sub-*/ses-movie/func/*_decomposition.json
+**/sub-*/ses-movie/func/*_componentLabels.txt
