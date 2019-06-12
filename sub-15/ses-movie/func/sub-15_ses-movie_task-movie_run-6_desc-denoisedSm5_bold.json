@@ -1,0 +1,4 @@
+{
+    "Description": "The fMRI data here is a denoised version of the original one in the studyforrest project (datails in RawSources).  A four-step denoising procedure including 1.preprocessing (motion correction, slice timing correction, brain extraction, high-pass temporal filtering [200s cutoff] and spatial smoothing [Gaussian kernel; FWHM = 5 mm] with FEAT in FSL v6.00), 2.ICA decomposition (with FSL's MELODIC v3.15), 3.IC manual classification and 4.artefacts removal (with fsl_regfilt in FSL's MELODIC v3.15) were applied. Source code can be found at https://github.com/xingyu-liu/studyforrest_denoise.",
+    "RawSources": "ds000113/sub-15/ses-movie/func/sub-15_ses-movie_task-movie_run-6_bold.nii.gz"
+}
