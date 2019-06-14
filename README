@@ -1,7 +1,7 @@
 A denoised audio-visual movie watching fMRI data in studyforrest dataset
 
 Note: This dataset is compatible with the BIDS v1.3.0-dev as a standalone derivative dataset. Due to that the OpenNeuro.org does not support 
-the BIDs v1.3.0 yet(_desc-<label> in file names), a made-up subject 'sub-phantom' was created only to pass the data stucture validation for uploading dataset.
+the BIDs v1.3.0 yet (_desc-<label> in file names), a made-up subject 'sub-phantom' was created only to pass the data stucture validation for uploading dataset.
 
 Source data
 ===========
