@@ -1,13 +1,8 @@
-1.2.0 2019.06.14
-	- Reorganize the dataset stucture and rename all files to according to BIDS v1.3.0 dev
-	- Add required metadata files according to BIDS v1.3.0 dev
-	- Remove the first line of all componentLabel files
-	- Add mixing matrix files
-	- Update Dataset_description.json
-	- Delete participants.tsv
+1.1.0	2019-03-19
 
-1.1.0 2019-03-19
 	- Add a license
 
-1.0 2019-02-25
+1.0	2019-02-25
+
 	- Initial release
+
