@@ -1,89 +1,124 @@
-A denoised audio-visual movie watching fMRI data in studyforrest dataset
+# A denoised audio-visual movie watching fMRI data in studyforrest dataset
 
-Note: This dataset is compatible with the BIDS v1.3.0-dev as a standalone derivative dataset. Due to that the OpenNeuro.org does not support 
-the BIDs v1.3.0 yet (_desc-<label> in file names), a made-up subject 'sub-phantom' was created only to pass the data stucture validation for uploading dataset.
+[![made-with-datalad](https://www.datalad.org/badges/made_with.svg)](https://datalad.org)
+[![PDDL-licensed](https://img.shields.io/badge/license-PDDL-blue.svg)](http://opendatacommons.org/licenses/pddl/summary)
+[![No registration or authentication required](https://img.shields.io/badge/data_access-unrestricted-green.svg)]()
 
-Source data
-===========
-We here provide a denoised version of the 3T movie-watching fMRI raw data in the studyforrest project (https://openneuro.org/datasets/ds000113). 
-The raw data was originally hosted on OpenfMRI.org as ds000113d. However, ds000113d on OpenfMRI.org has been combined along with other related datasets and now is simply referred to as ds000113 on OpenNeuro.org. For more information about the studyforrest project visit: http://studyforrest.org.
+Note: This dataset is compatible with the BIDS v1.3.0-dev as a standalone
+derivative dataset. Due to that the OpenNeuro.org does not support the BIDs
+v1.3.0 yet (_desc-<label> in file names), a made-up subject 'sub-phantom' was
+created only to pass the data stucture validation for uploading dataset.
 
-Pipeline description
-====================
-A four-step denoising procedure were applied on the movie-watching fMRI data in the studyforrest dataset, producing a denoised version of that.  
-1. Preprocessing: motion correction, slice timing correction, brain extraction, high-pass temporal filtering (200s cutoff) and OPTIONAL spatial smoothing (Gaussian kernel; FWHM = 5 mm) with FEAT in FSL v6.00  
-2. ICA decomposition: with FSL’s MELODIC v3.15  
-3. IC manual classification  
-4. Artefacts removal: with fsl_regfilt in FSL’s MELODIC v3.15  
+## Source data
+
+We here provide a denoised version of the 3T movie-watching fMRI raw data in the
+studyforrest project (https://openneuro.org/datasets/ds000113).  The raw data
+was originally hosted on OpenfMRI.org as ds000113d. However, ds000113d on
+OpenfMRI.org has been combined along with other related datasets and now is
+simply referred to as ds000113 on OpenNeuro.org. For more information about the
+studyforrest project visit: http://studyforrest.org.
+
+## Pipeline description
+
+A four-step denoising procedure were applied on the movie-watching fMRI data in
+the studyforrest dataset, producing a denoised version of that.
+
+1. Preprocessing: motion correction, slice timing correction, brain extraction,
+   high-pass temporal filtering (200s cutoff) and OPTIONAL spatial smoothing
+   (Gaussian kernel; FWHM = 5 mm) with FEAT in FSL v6.00
+2. ICA decomposition: with FSL’s MELODIC v3.15
+3. IC manual classification
+4. Artefacts removal: with fsl_regfilt in FSL’s MELODIC v3.15
+
 Source code can be found at https://github.com/xingyu-liu/studyforrest_denoise.
 
-Dataset content overview
-========================
-After the four-step denoising procedure, 4 kinds of data were produced for each run of each participant.  
-1. the denoised fMRI data  
-./sub-xx/ses-movie/func/sub-xx_ses-movie_task-movie-run-x_desc-denoisedSm5/denoisedUnsm_bold.nii.gz  
-2. spatial maps of decomposed ICs  
-./sub-xx/ses-movie/func/sub-xx_ses-movie_task-movie-run-x_desc-MELODICSm5/MELODICUnsm_components.nii.gz  
-3. timeseries of decomposed ICs  
-./sub-xx/ses-movie/func/sub-xx_ses-movie_task-movie-run-x_desc-MELODICSm5/MELODICUnsm_mixing.tsv  
-4. Labels of decomposed ICs  
-./sub-xx/ses-movie/func/sub-xx_ses-movie_task-movie-run-x_desc-MELODICSm5/MELODICUnsm_componentLabels.txt
+## Dataset content overview
 
-DataLad datasets and how to use them
-====================================
-This repository is a DataLad (https://www.datalad.org/) dataset.
-It provides fine-grained data access down to the level of individual files,
-and allows for tracking future updates.
-In order to use this repository for data retrieval, DataLad (https://www.datalad.org/)
-is required. It is a free and open source command line tool, available for all
-major operating systems, and builds up on Git and git-annex
-(https://git-annex.branchable.com/) to allow sharing, synchronizing, and version
-controlling collections of large files. You can find information on how to install
-DataLad at http://handbook.datalad.org/en/latest/intro/installation.html.
+After the four-step denoising procedure, 4 kinds of data were produced for each
+run of each participant.
 
-Get the dataset
-===============
-A DataLad dataset can be “cloned” by running
+1. the denoised fMRI data
 
-        ‘datalad clone <url>’.
+`./sub-xx/ses-movie/func/sub-xx_ses-movie_task-movie-run-x_desc-denoisedSm5/denoisedUnsm_bold.nii.gz`
+
+2. spatial maps of decomposed ICs
+
+`./sub-xx/ses-movie/func/sub-xx_ses-movie_task-movie-run-x_desc-MELODICSm5/MELODICUnsm_components.nii.gz`
+
+3. timeseries of decomposed ICs
+
+`./sub-xx/ses-movie/func/sub-xx_ses-movie_task-movie-run-x_desc-MELODICSm5/MELODICUnsm_mixing.tsv`
+
+4. Labels of decomposed ICs
+
+`./sub-xx/ses-movie/func/sub-xx_ses-movie_task-movie-run-x_desc-MELODICSm5/MELODICUnsm_componentLabels.txt`
+
+## DataLad datasets and how to use them
+
+This repository is a [DataLad](https://www.datalad.org/) dataset. It provides
+fine-grained data access down to the level of individual files, and allows for
+tracking future updates. In order to use this repository for data retrieval,
+[DataLad](https://www.datalad.org/) is required. It is a free and
+open source command line tool, available for all major operating
+systems, and builds up on Git and [git-annex](https://git-annex.branchable.com/)
+to allow sharing, synchronizing, and version controlling collections of
+large files. You can find information on how to install DataLad at
+[handbook.datalad.org/en/latest/intro/installation.html](http://handbook.datalad.org/en/latest/intro/installation.html).
+
+### Get the dataset
+
+A DataLad dataset can be `cloned` by running
+
+```
+datalad clone <url>
+```
 
 Once a dataset is cloned, it is a light-weight directory on your local machine.
-At this point, it contains only small metadata and information on the identity
-of the files in the dataset, but not actual content of the (sometimes large) data files.
+At this point, it contains only small metadata and information on the
+identity of the files in the dataset, but not actual *content* of the
+(sometimes large) data files.
 
-Retrieve dataset content
-========================
+### Retrieve dataset content
+
 After cloning a dataset, you can retrieve file contents by running
 
-        ‘datalad get <path/to/directory/or/file>’
+```
+datalad get <path/to/directory/or/file>
+```
 
-This command will trigger a download of the files, directories, or subdatasets
-you have specified.
+This command will trigger a download of the files, directories, or
+subdatasets you have specified.
 
-DataLad datasets can contain other datasets, so called “subdatasets”.
-If you clone the top-level dataset, subdatasets do not yet contain metadata and
-information on the identity of files, but appear to be empty directories.
-In order to retrieve file availability metadata in subdatasets, run
+DataLad datasets can contain other datasets, so called *subdatasets*.
+If you clone the top-level dataset, subdatasets do not yet contain
+metadata and information on the identity of files, but appear to be
+empty directories. In order to retrieve file availability metadata in
+subdatasets, run
 
-        ‘datalad get -n <path/to/subdataset>’
+```
+datalad get -n <path/to/subdataset>
+```
 
-Afterwards, you can browse the retrieved metadata to find out about subdataset
-contents, and retrieve individual files with datalad get.
-If you use ‘datalad get <path/to/subdataset>’, all contents of the subdataset
-will be downloaded at once.
+Afterwards, you can browse the retrieved metadata to find out about
+subdataset contents, and retrieve individual files with `datalad get`.
+If you use `datalad get <path/to/subdataset>`, all contents of the
+subdataset will be downloaded at once.
 
-Stay up-to-date
-===============
-DataLad datasets can be updated. The command ‘datalad update’ will “fetch” updates
-and store them on a different branch (by default ‘remotes/origin/master’).
-Running
+### Stay up-to-date
 
-        ‘datalad update –merge’
+DataLad datasets can be updated. The command `datalad update` will
+*fetch* updates and store them on a different branch (by default
+`remotes/origin/master`). Running
 
-will “pull” available updates and integrate them in one go.
+```
+datalad update --merge
+```
 
-More information
-================
-More information on DataLad and how to use it can be found in the DataLad Handbook at http://handbook.datalad.org/en/latest/index.html. The chapter “DataLad datasets” can help you to familiarize yourself with the concept of a dataset.
+will *pull* available updates and integrate them in one go.
 
+### More information
+
+More information on DataLad and how to use it can be found in the DataLad Handbook at
+[handbook.datalad.org](http://handbook.datalad.org/en/latest/index.html). The chapter
+"DataLad datasets" can help you to familiarize yourself with the concept of a dataset.
 
